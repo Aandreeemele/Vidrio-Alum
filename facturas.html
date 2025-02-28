@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos</title>
+    <link rel="stylesheet" href="facturas.css">
+</head>
+<body>
+    <section class="contenedor4">
+        <div class="titulo">Catálogo de Ventanas y Puertas de PVC y Aluminio</div>
+        
+        <div class="catalogo">
+            <div class="producto" onclick="verDetalles('ventana-pvc')">
+                <img src="https://gt.epaenlinea.com/media/catalog/product/cache/3f8a07f91ed96197ac7613a4e8859f2d/2/d/2d606d3e-cb6a-4c1c-8bd3-7f8081575ebe.jpg" alt="Ventana PVC">
+                <h3>Ventana PVC</h3>
+                <p>En tres estilos, emitación madera, negro o blanco.</p>
+
+            </div>
+            <div class="producto" onclick="verDetalles('ventana-aluminio')">
+                <img src="https://www.instalumsa.com/wp-content/uploads/2022/03/ventanas-y-puertas-pvc-blanco-03.jpg" alt="Ventana Aluminio">
+                <h3>Ventana Aluminio</h3>
+                <p>En dos estilos color natural o negro.</p>
+
+            </div>
+            <div class="producto" onclick="verDetalles('puerta-pvc')">
+                <img src="https://i.pinimg.com/736x/3f/1f/be/3f1fbefe46df1fa683d04d022c0b1140.jpg" alt="Puerta PVC">
+                <h3>Puerta PVC</h3>
+                <p>Contamos con tres estilos de material, emitación madera, negro o blanco.</p>
+
+            </div>
+            <div class="producto" onclick="verDetalles('puerta-aluminio')">
+                <img src="https://diamondglass.pe/wp-content/uploads/2021/11/IMG-20210401-WA0401-copia-1.jpg" alt="Puerta Aluminio">
+                <h3>Puerta Aluminio</h3>
+                <p>En dos colores de material color natural o negro.</p>
+
+            </div>
+            <div class="producto" onclick="verDetalles('cielo-falso')">
+                <img src="https://storage.googleapis.com/anuto-production.appspot.com/userImages%2Fl1JuuDwWcNR89WkhoupVciK4f1t1%2Fthumb%40contain_238jpg_4491694?GoogleAccessId=firebase-adminsdk-8gdml%40anuto-production.iam.gserviceaccount.com&Expires=16730323200&Signature=gq3hBDqHUnkHcnfy7bJlbqtT5FJm%2Fd3XmcCk5BI3zyuQBkO2InbEZ91zm4jIDdHWWyGyDrHLxYcmdVlVS0T4S5g5%2Fr%2BJGvo8JFu8m2qrpUzIfPRYgSKnm8LYnCCnJe51vlxiaL6oEfSriNh3KhlL3v%2FgXRO8vL8P8ZWsrd%2B%2BaylhcsZ%2F8iSVn2x4arDOUqO8eMA43TSzXMCiKOO%2Fpd01Xa%2B7FeQHoQmo0rTjyE1vFk3T56BZAgArEKtBBVW%2BcvrNIq2xFu4VnbfllqqhSing2Q2mQlN1tHrw6sRIs9VP%2BoT%2Fg199THC2tXUKfNfuCeKUThK%2B2CZudrizcw6s70TMHw%3D%3D" alt="Cielo Falso">
+                <h3>Cielo Falso</h3>
+                <p>Diferentes tipos de estilos, sobre la plancha del duroport.</p>
+
+            </div>
+            <div class="producto" onclick="verDetalles('mostrador')">
+                <img src="https://i.pinimg.com/550x/8d/bd/9c/8dbd9c590b3e0c5542504c1e22e83cd3.jpg" alt="Mostrador">
+                <h3>Mostrador</h3>
+                <p>Diferentes estilos.</p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de detalles -->
+    <div id="modal" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal()">&times;</span>
+            <h3 id="tituloModal">Detalles del Producto</h3>
+            <img id="imgModal" src="" alt="Imagen Producto">
+            <p id="descripcionModal">Descripción detallada del producto.</p>
+            <p id="precioModal">Precio: $XXX</p>
+            <button class="solicitar" onclick="solicitarInformacion()">Solicitar más información</button>
+        </div>
+    </div>
+
+    <a href="index.html" class="regresar">Regresar al principal</a>
+
+    <script src="dibujo.js"></script>
+</body>
+</html>

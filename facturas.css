@@ -1,0 +1,221 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+.contenedor4 {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(12, 12, 48);
+    box-shadow: 0 50px 80px rgb(0, 0, 15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.titulo {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.producto {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.producto h3 {
+    font-size: 1.5rem;
+    color: rgb(12, 12, 48);
+    margin-top: 1rem;
+}
+
+.producto p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0.5rem 0;
+}
+
+.precio {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.regresar {
+    display: block;
+    text-align: center;
+    background-color: rgb(7, 121, 129);
+    font-size: 1.5rem;
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.regresar:hover {
+    background-color: rgb(5, 96, 101);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-contenido {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.cerrar {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.solcitar {
+    margin-top: 10px;
+    padding: 0.8rem;
+    background-color: rgb(7, 121, 129);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.solcitar:hover {
+    background-color: rgb(5, 96, 101);
+}
+
+/* Media Queries para mejorar la visualización en dispositivos móviles */
+@media (max-width: 768px) {
+    .contenedor4 {
+        padding: 1rem;
+    }
+
+    .titulo {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .catalogo {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .producto h3 {
+        font-size: 1.2rem;
+    }
+
+    .producto p {
+        font-size: 0.9rem;
+    }
+
+    .precio {
+        font-size: 1rem;
+    }
+
+    .regresar {
+        font-size: 1.2rem;
+        padding: 0.8rem;
+    }
+
+    .modal-contenido {
+        width: 90%;
+        margin: 10% auto;
+    }
+
+    .solcitar {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+/* Para pantallas muy pequeñas (móviles muy pequeños) */
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .catalogo {
+        grid-template-columns: 1fr;
+    }
+
+    .producto {
+        padding: 0.8rem;
+    }
+
+    .producto h3 {
+        font-size: 1rem;
+    }
+
+    .producto p {
+        font-size: 0.8rem;
+    }
+
+    .precio {
+        font-size: 0.9rem;
+    }
+
+    .regresar {
+        font-size: 1rem;
+        padding: 0.6rem;
+    }
+
+    .modal-contenido {
+        width: 90%;
+    }
+
+    .solcitar {
+        width: 100%;
+        padding: 1rem;
+    }
+}

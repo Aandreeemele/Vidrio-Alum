@@ -1,0 +1,79 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(247, 247, 252);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.contenedor {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.div1 { animation: slideIn 1s ease-in-out; }
+.div2 { animation: slideIn 1.2s ease-in-out; }
+.div3 { animation: typing 3s steps(30, end) forwards, fadeIn 1.5s ease-in-out, slideIn 1.4s ease-in-out; }
+.div4 { animation: slideIn 1.6s ease-in-out, moveSide 3s infinite alternate ease-in-out; }
+.div5 { animation: slideIn 1.8s ease-in-out, moveSide 3s infinite alternate ease-in-out; }
+.div6 { animation: slideIn 2s ease-in-out, moveSide 3s infinite alternate ease-in-out; }
+
+.div1, .div2, .div3, .div4, .div5, .div6 {
+    box-shadow: 0 15px 25px rgb(46, 46, 168);
+    color: white;
+    background-color: rgb(12, 12, 48);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 15px;
+    height: 3.5rem;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.div1:hover, .div2:hover, .div3:hover, .div4:hover, .div5:hover, .div6:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgb(46, 46, 168);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes moveSide {
+    from { transform: translateX(-10px); }
+    to { transform: translateX(10px); }
+}
+
+.img1 {
+    position: relative;
+    width: 40%;
+    max-width: 150px;
+    margin: auto;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.div2{
+    grid-row: 6/7;
+    font-size: 1rem;
+}

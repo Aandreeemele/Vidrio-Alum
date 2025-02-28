@@ -1,0 +1,234 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(12, 12, 48);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor3 {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+    background-color: rgb(12, 12, 48);
+    box-shadow: 0 50px 80px rgb(0, 0, 15);
+    border-radius: 15px;
+    position: relative;
+}
+
+/* FORMULARIO */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgba(12, 12, 48, 0.9);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.formulario:hover {
+    transform: scale(1.03);
+}
+
+.formulario label {
+    font-weight: bold;
+}
+
+/* BOTÓN */
+button {
+    padding: 12px;
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0088cc;
+    transform: scale(1.05);
+}
+
+/* COTIZACIÓN */
+.cotizacion {
+    grid-column: 2/3;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* ENCABEZADO */
+.encabezado-cotizacion {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.encabezado-cotizacion h1 {
+    margin: 0;
+    color: #00aaff;
+}
+
+.encabezado-cotizacion p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* DATOS CLIENTE */
+.datos-cliente div {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.datos-cliente strong {
+    color: #555;
+}
+
+/* PRODUCTOS */
+.productos {
+    margin-top: 20px;
+}
+
+.productos h3 {
+    font-size: 1.2rem;
+    color: #00aaff;
+    margin-bottom: 10px;
+}
+
+/* TABLA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f1f1f1;
+}
+
+/* NOTA */
+.nota {
+    margin-top: 20px;
+    font-size: 1rem;
+    background-color: #fffbcc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* FIRMA */
+.firma {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* BOTÓN REGRESAR */
+.regresar {
+    display: block;
+    text-align: center;
+    background-color: #00aaff;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    position: absolute;
+    bottom: -60px;  /* Ajustado para que esté más abajo */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 300px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.regresar:hover {
+    background-color: #0088cc;
+    transform: scale(1.05);
+}
+
+
+/* ANIMACIÓN */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .contenedor3 {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .cotizacion {
+        grid-column: 1/2;
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedor3 {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .cotizacion {
+        padding: 15px;
+    }
+
+    .formulario {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor3 {
+        padding: 10px;
+    }
+
+    .formulario, .cotizacion {
+        padding: 10px;
+    }
+
+    button {
+        padding: 10px;
+    }
+
+    .regresar {
+        font-size: 1rem;
+    }
+
+    .productos h3 {
+        font-size: 1rem;
+    }
+
+    .encabezado-cotizacion h1 {
+        font-size: 1.5rem;
+    }
+
+    .encabezado-cotizacion p {
+        font-size: 1rem;
+    }
+}
